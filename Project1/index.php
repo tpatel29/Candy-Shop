@@ -1,4 +1,41 @@
-<?php include("../views/header.php") ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Candy Shop</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-md
+                            justify-content-start
+                            bg-dark navbar-dark
+                            col-12">
+                <a href="../index.php"> 𝓒𝓪𝓷𝓭𝔂 𝓢𝓱𝓸𝓹</a>
+                <button class="navbar-toggler" type="button"
+                        data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggle-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Project1/product-list.php">Product List</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../Project1/productDetails.php">Product Detail</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+
 
     <div class = "document-center">
         <div class="carousel-container">
@@ -66,4 +103,12 @@
         exercitationem expedita, facere harum hic illum laudantium necessitatibus nulla officia quidem quod repudiandae
         rerum similique temporibus tenetur.</p>
 
-<?php include("../views/footer.php") ?>
+</body>
+<footer class="footer page-footer font-small">
+    <div class="container">
+        <div class="row">
+            <span class="text-muted">&copy; Pavisha Amin, Tejkumar Patel, Hassan Khalid, 2022 | Terms of Use | Privacy Statement</span>
+        </div>
+    </div>
+</footer>
+

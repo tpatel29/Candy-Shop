@@ -1,4 +1,3 @@
-</body>
 <footer class="footer page-footer font-small">
     <div class="container">
         <div class="row">
@@ -6,3 +5,5 @@
         </div>
     </div>
 </footer>
+</body>
+</html>

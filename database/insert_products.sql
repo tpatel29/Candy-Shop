@@ -34,7 +34,7 @@ VALUES
         1.00,
         'Regular',
         'Fruity'
-    )
+    ),
     (
         'KitKat',
         5.00,
@@ -112,13 +112,13 @@ VALUES
         3.00,
         'Share',
         'Caramel'
-    )
+    ),
     (
         'Nerds',
         1.50,
         'Regular',
         'Fruity'
-    )
+    ),
     (
         'Twix',
         0.75,
