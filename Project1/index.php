@@ -40,7 +40,27 @@
     <div class = "document-center">
         <div class="carousel-container">
             <div class="carousel" id="carousel-1"></div>
-            <img src="images/candy.jpeg" alt="candy">
+            <section class = "carousel-screen">
+                <img src="images/candy.jpeg" alt="candy">
+                <section class = "text-container">
+                    <p>Candy</p>
+                    <p>Chocolate and Hard Variety</p>
+                </section>
+            </section>
+            <section class = "carousel-screen">
+                <img src="images/chocolatecandy.jpeg" alt="chocolate">
+                <section class = "text-container">
+                    <p>Candy</p>
+                    <p>Chocolate Variety</p>
+                </section>
+            </section>
+            <section class = "carousel-screen">
+                <img src="images/hardcandy.jpeg" alt="hardcandy">
+                <section class = "text-container">
+                    <p>Candy</p>
+                    <p>Hard Candy Variety</p>
+                </section>
+            </section>
             <section class="circle-container">
                 <div class = "circle"></div>
                 <div class = "circle"></div>
@@ -54,33 +74,6 @@
             </div>
         </div>
     </div>
-<!--    <div class="carousel">-->
-<!--        <button class="carousel__button carousel__button&#45;&#45;left is-hidden">-->
-<!--            <img src="images/left.png" alt="">-->
-<!--        </button>-->
-<!--        <div class="carousel__track-container">-->
-<!--            <ul class="carousel__track">-->
-<!--                <li class="carousel__slide current-slide">-->
-<!--                    <img class="carousel__images" src="images/candy.jpeg" alt="">-->
-<!--                </li>-->
-<!--                <li class="carousel__slide">-->
-<!--                    <img class="carousel__images" src="images/chocolatecandy.jpeg" alt="">-->
-<!--                </li>-->
-<!--                <li class="carousel__slide">-->
-<!--                    <img class="carousel__images" src="images/hardcandy.jpeg" alt="">-->
-<!--                </li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--        <button class="carousel__button carousel__button&#45;&#45;right">-->
-<!--            <img src="images/right.png" alt="">-->
-<!--        </button>-->
-<!--        <div class="carousel__nav">-->
-<!--            <button class="carousel__indicator current-slide"></button>-->
-<!--            <button class="carousel__indicator"></button>-->
-<!--            <button class="carousel__indicator"></button>-->
-<!--        </div>-->
-<!--    </div>-->
-    <script src="index.js"></script>
 
     <h2>Welcome to the Candy Shop!</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, inventore ipsum. A at culpa cum earum iure
@@ -103,6 +96,7 @@
         exercitationem expedita, facere harum hic illum laudantium necessitatibus nulla officia quidem quod repudiandae
         rerum similique temporibus tenetur.</p>
 
+    <script src="index.js"></script>
 </body>
 <footer class="footer page-footer font-small">
     <div class="container">
@@ -111,4 +105,3 @@
         </div>
     </div>
 </footer>
-
