@@ -117,84 +117,73 @@ body{
     background-color: white;
 }
 
-/*.carousel{*/
-/*    position: relative;*/
-/*    height: 500px;*/
-/*    width: 80%;*/
-/*    margin: 0 auto;*/
-/*}*/
-/*.carousel__images{*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    object-fit: cover;*/
-/*}*/
+.text-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    bottom: 45px;
+    left: 0;
+    width: 100%;
+    color: white;
+    text-shadow: 1px 1px black;
+    text-align: center;
+}
 
-/*.carousel__track-container{*/
-/*    height: 100%;*/
-/*    position: relative;*/
-/*    overflow: hidden;*/
-/*}*/
+.text-container p:nth-child(1){
+    margin: 10px 100px;
+    font-size: 1.5em;
+}
 
-/*.carousel__track{*/
-/*    padding: 0;*/
-/*    margin: 0;*/
-/*    list-style: none;*/
-/*    position: relative;*/
-/*    height: 100%;*/
-/*    transition: transform 250ms ease-in;*/
-/*}*/
+.text-container p:nth-child(2){
+    margin: 10px 100px 20px 100px;
+    font-size: 1.5em;
+}
 
-/*.carousel__slide{*/
-/*    position: absolute;*/
-/*    top: 0;*/
-/*    bottom: 0;*/
-/*    width: 100%;*/
-/*}*/
+.carousel-screen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
-/*.carousel__button{*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    transform: translateY(-50%);*/
-/*    background: transparent;*/
-/*    border: 0;*/
-/*    cursor: pointer;*/
-/*}*/
+@keyframes toRight {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: 100%;
+    }
+}
 
-/*.carousel__button--left{*/
-/*    left: -40px;*/
-/*}*/
+@keyframes toLeft {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: -100%;
+    }
+}
 
-/*.carousel__button--right{*/
-/*    right: -40px;*/
-/*}*/
+@keyframes comeRight {
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: 0;
+    }
+}
 
-/*.carousel__button img{*/
-/*    width: 15px;*/
-/*}*/
-
-/*.carousel__nav{*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    padding: 10px 0;*/
-/*}*/
-
-/*.carousel__indicator{*/
-/*    border: 0;*/
-/*    border-radius: 50%;*/
-/*    width: 15px;*/
-/*    height: 15px;*/
-/*    background: rgba(0,0,0,.3);*/
-/*    margin: 0 10px;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*.carousel__indicator.current-slide{*/
-/*    background: rgba(0,0,0,.75);*/
-/*}*/
-
-/*.is-hidden{*/
-/*    display: none;*/
-/*}*/
+@keyframes toLeft {
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0;
+    }
+}
 
 .footer {
     position: fixed;
