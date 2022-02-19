@@ -13,6 +13,7 @@ $productList = getProductByID($productID);
             </div>
             <div style="float: left; width: 40%; padding: 10px; height: 300px;">
                 <h1> <?php echo $productList['name']?></h1>
+                <h1> Hello </h1>
                 <h3> Price: <?php echo '$'.strval($productList['price']);?></h3>
                 <p> Size: <?php echo $productList['size']?> </p>
                 <p> Flavor: <?php echo $productList['flavor']?> </p>
