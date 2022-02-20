@@ -24,7 +24,7 @@
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Product List</a>
+            <a class="nav-link" href="./product-list.php">Product List</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./productDetails.php?id=2">Product Detail</a>
