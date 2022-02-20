@@ -4,14 +4,14 @@
 
 ?>
 
-<div class="centered">
+<div class="centered" >
 
         <div>
-            <h1 >Filters</h1>
+            <h1 >Filters </h1>
 
         </div>
 
-        <main class="cards">
+        <main class="cards ">
 
 
             <div class="card">

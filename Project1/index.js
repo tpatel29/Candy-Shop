@@ -9,7 +9,7 @@ document.getElementById("carousel__button-next").addEventListener("click", funct
 });
 
 document.getElementById("carousel__button-prev").addEventListener("click", function(){
-    moveToPrevSlide();
+    moveToPrevSlide( );
 });
 
 //start timer once you load the page
