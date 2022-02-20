@@ -1,186 +1,65 @@
-let rightArrow = document.querySelector("#carousel-1 .right-arrow");
-let leftArrow = document.querySelector("#carousel-1 .left-arrow");
+let slidePosition = 0;
+const slides = document.getElementsByClassName("carousel__item");
+const totalSlides = slides.length;
 
-let screenDisplay = document.querySelectorAll("#carousel-1 .carousel-screen");
-let numOfScreens = screenDisplay.length;
-
-let circles = document.querySelectorAll("#carousel-1 .circle-container .circle");
-
-let currentScreen = 0;
-
-let inAnimation = false;
-
-let animationTime = 500;
-
-sortPosition(screenDisplay[currentScreen], screenDisplay[currentScreen-1], screenDisplay[currentScreen+1]);
-highlightCircle(circles[0]);
-
-rightArrow.addEventListener("click", () => {
-    startAnimation("right");
+document.getElementById("carousel__button-next").addEventListener("click", function(){
+    moveToNextSlide();
 });
 
-leftArrow.addEventListener("click", () => {
-    startAnimation("left");
+document.getElementById("carousel__button-prev").addEventListener("click", function(){
+    moveToPrevSlide();
 });
 
-function startAnimation(direction){
-    if(!inAnimation){
-        inAnimation = true;
-        if(direction === "right"){
-            moveRight();
-            highlightCircle(circles[currentScreen+1], "right");
-        } else if(direction === "left"){
-            moveLeft();
-            highlightCircle(circles[currentScreen-1], "left");
-        } else {
-            inAnimation = false;
-            return
-        }
+function updateSlidePosition(){
+    for(let slide of slides){
+        slide.classList.remove("carousel__item--selected");
+        slide.classList.add("carousel__item--hidden");
     }
+
+    slides[slidePosition].classList.add("carousel__item--selected");
 }
 
-function moveRight(){
-    if(currentScreen < numOfScreens - 1){
-        toLeft(screenDisplay[currentScreen]);
-        comeRight(screenDisplay[currentScreen + 1]);
-        setTimeout(() => {
-            inAnimation = false;
-            currentScreen++;
-            sortPosition(screenDisplay[currentScreen], screenDisplay[currentScreen-1], screenDisplay[currentScreen+1]);
-        }, animationTime)
+function moveToNextSlide(){
+    if(slidePosition === totalSlides -1){
+        slidePosition = 0;
     } else {
-        toLeft(screenDisplay[currentScreen]);
-        comeRight(screenDisplay[0]);
-        setTimeout(() => {
-            inAnimation = false;
-            currentScreen = 0;
-            sortPosition(screenDisplay[currentScreen], screenDisplay[currentScreen-1], screenDisplay[currentScreen+1]);
-        }, animationTime)
+        slidePosition++;
     }
+    updateSlidePosition()
 }
 
-function moveLeft(){
-    if(currentScreen > 0){
-        toRight(screenDisplay[currentScreen]);
-        comeLeft(screenDisplay[currentScreen - 1]);
-        setTimeout(() => {
-            inAnimation = false;
-            currentScreen--;
-            sortPosition(screenDisplay[currentScreen], screenDisplay[currentScreen-1], screenDisplay[currentScreen+1]);
-        }, animationTime)
+function moveToPrevSlide(){
+    if(slidePosition === 0){
+        slidePosition = totalSlides - 1;
     } else {
-        toRight(screenDisplay[currentScreen]);
-        comeLeft(screenDisplay[numOfScreens - 1]);
-        setTimeout(() => {
-            inAnimation = false;
-            currentScreen = numOfScreens - 1;
-            sortPosition(screenDisplay[currentScreen], screenDisplay[currentScreen-1], screenDisplay[currentScreen+1]);
-        }, animationTime)
+        slidePosition--;
     }
+    updateSlidePosition()
 }
 
-function toLeft(screen) {
-    screen.style.animation = "toLeft 0.5s ease-in-out forwards";
-    setTimeout(() => {
-        screen.style.animation = "";
-    }, animationTime)
-}
+document.querySelectorAll(".carousel").forEach(carousel =>{
+    const items = carousel.querySelectorAll(".carousel__item");
+    const buttonDisplay = Array.from(items, () => {
+        return `<span class="carousel__button"></span>`;
+    });
 
-function toRight(screen) {
-    screen.style.animation = "toRight 0.5s ease-in-out forwards";
-    setTimeout(() => {
-        screen.style.animation = "";
-    }, animationTime)
-}
+    carousel.insertAdjacentHTML("beforeend", `
+        <div class="carousel__nav">
+            ${buttonDisplay.join("")}
+        </div>
+    `);
 
-function comeRight(screen) {
-    screen.style.animation = "comeRight 0.5s ease-in-out forwards";
-    setTimeout(() => {
-        screen.style.animation = "";
-    }, animationTime)
-}
+    const buttons = carousel.querySelectorAll(".carousel__button");
 
-function comeLeft(screen) {
-    screen.style.animation = "comeLeft 0.5s ease-in-out forwards";
-    setTimeout(() => {
-        screen.style.animation = "";
-    }, animationTime)
-}
+    buttons.forEach((button, i) => {
+        button.addEventListener("click", () => {
+            items.forEach(item => item.classList.remove("carousel__item--selected"));
+            buttons.forEach(button => button.classList.remove("carousel__button--selected"));
 
-function sortPosition(mainScreen, leftScreen, rightScreen){
-    if(rightScreen === undefined){
-        rightScreen = screenDisplay[0];
-    }
-    if(leftScreen === undefined){
-        leftScreen = screenDisplay[numOfScreens-1];
-    }
-
-    screenDisplay.forEach(screen => {
-        if(screen === mainScreen){
-            screen.style.display = "block";
-            screen.style.left = "0px";
-        } else if(screen === leftScreen){
-            screen.style.display = "block";
-            screen.style.left = "-100%";
-        } else if(screen === rightScreen){
-            screen.style.display = "block";
-            screen.style.left = "100%";
-        } else {
-            screen.style.display = "none";
-        }
-    })
-}
-
-circles.forEach(circle => {
-    circle.addEventListener("click", event => {
-        if(!inAnimation){
-            let circlesArray = Array.prototype.slice.call(circles);
-            let circleIndex = circlesArray.indexOf(event.target);
-            highlightCircle(event.target);
-            if(circleIndex > currentScreen){
-                changeScreenCircle(circleIndex, "right");
-            } else if(circleIndex < currentScreen){
-                changeScreenCircle(circleIndex, "left");
-            }
-        }
-    })
-})
-
-function changeScreenCircle(circleIndex, direction){
-    inAnimation = true;
-    if(direction === "right"){
-        sortPosition(screenDisplay[currentScreen], screenDisplay[currentScreen-1], screenDisplay[circleIndex]);
-        toLeft(screenDisplay[currentScreen]);
-        comeRight(screenDisplay[circleIndex]);
-    } else if(direction === "left"){
-        sortPosition(screenDisplay[currentScreen], screenDisplay[circleIndex], screenDisplay[currentScreen + 1]);
-        toRight(screenDisplay[currentScreen]);
-        comeLeft(screenDisplay[circleIndex]);
-    } else {
-        inAnimation = false;
-        return
-    }
-    setTimeout(() => {
-        inAnimation = false;
-        currentScreen = circleIndex;
-        sortPosition(screenDisplay[currentScreen], screenDisplay[currentScreen-1], screenDisplay[currentScreen+1]);
-    }, animationTime)
-}
-
-function highlightCircle(circleSelect, direction){
-    if(circleSelect === undefined && direction === "right"){
-        circleSelect = circles[0];
-    } else if(circleSelect === undefined && direction === "left"){
-        circleSelect = circles[numOfScreens-1]
-    }
-    circles.forEach(circle => {
-        if(circle === circleSelect){
-            circle.classList.add("circle-fill");
-        } else {
-            circle.classList.remove("circle-fill");
-        }
-    })
-}
-
+            items[i].classList.add("carousel__item--selected");
+            button.classList.add("carousel__button--selected");
+        });
+    });
+});
 
 
