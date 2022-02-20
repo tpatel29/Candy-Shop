@@ -56,7 +56,7 @@ VALUES
         'Chocolate'
     ),
     (
-        'KitKate Regular',
+        'KitKat Regular',
         'KitKat',
         1.00,
         'Regular',

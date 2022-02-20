@@ -1,40 +1,5 @@
-<?php include("../database/connection.php") ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>The Sweet Tooth Co.</title>
-  <link rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-        crossorigin="anonymous">
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-<div class="container-fluid">
-  <div class="row">
-    <nav class="navbar navbar-expand-md
-                            justify-content-start
-                            bg-dark navbar-dark
-                            col-12">
-      <a href="#">𝕥𝕙𝕖 𝕤𝕨𝕖𝕖𝕥 𝕥𝕠𝕠𝕥𝕙</a>
-      <button class="navbar-toggler" type="button"
-              data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggle-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="./product-list.php">Product List</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./productDetails.php?id=2">Product Detail</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-</div>
+<?php include("../views/header.php") ?>
+
 <div class="carousel">
   <div class="carousel__item carousel__item--selected">Variety of Candy
     <section class = "carousel-screen">
@@ -57,6 +22,7 @@
   </div>
 </div>
 <script src="index.js"></script>
+<script src="filter.js"></script>
 <h2>Welcome to The Sweet Tooth!</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, inventore ipsum. A at culpa cum earum iure
   magnam perferendis reprehenderit sapiente unde! Distinctio esse iste reiciendis saepe sed sequi ut?</p>
@@ -77,13 +43,4 @@
 <p>A architecto cum laboriosam placeat, recusandae rem suscipit voluptas voluptates. Amet dolores eligendi
   exercitationem expedita, facere harum hic illum laudantium necessitatibus nulla officia quidem quod repudiandae
   rerum similique temporibus tenetur.</p>
-</body>
-<footer class="footer page-footer font-small">
-  <div class="container">
-    <div class="row">
-      <span class="text-muted">The Sweet Tooth Co.</span>
-        <span class = "text-muted">123-456-6789 | @thesweettoothco.com | 95 Christopher Columbus Dr, Jersey City, NJ 07302</span>
-      <span class="text-muted">&copy; Pavisha Amin, Tejkumar Patel, Hassan Khalid, 2022 | Terms of Use | Privacy Statement</span>
-    </div>
-  </div>
-</footer>
+<?php include("../views/footer.php")?>

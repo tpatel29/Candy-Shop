@@ -2,7 +2,7 @@
 include("../database/functions.php");
 include("../views/header.php");
 $productID = filter_input(INPUT_POST, 'id');
-$productList = getProductByID($productID);
+$productList = get_product($productID);
 ?>
 <div>
     <br>

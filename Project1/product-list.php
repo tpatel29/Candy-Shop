@@ -1,95 +1,31 @@
 <?php
     include("../views/header.php")
-
-
 ?>
-
 <div class="centered" >
-
-        <div>
+        <form class="form1" >
             <h1 >Filters </h1>
-
+            <labal for="sort">Sort By: </labal>
+            <select id="sort" onchange="ajaxFunction1()">
+                <option value='price'>Price</option>
+                <option value='name'>Name</option>
+            </select>
+            <labal for="filter">Filter By: </labal>
+            <select id="filter" onchange="ajaxFunction1()">
+                <option value='price'>Price</option>
+                <option value='name'>Name</option>
+                <option value='flavor'>Flavor</option>
+                <option value='brand'>Brand</option>
+            </select>
+        </form>
+        <div id = 'ajaxDiv'>
+            <?php
+                $sort="";
+                $filter="";
+                include("./product-List-Form.php")
+            ?>
         </div>
+        <br><br><br>
 
-        <main class="cards ">
-
-
-            <div class="card">
-                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
-                <div class="text">
-                    <h2>KitKat</h2>
-                    <h4>$5.00</h4>
-                    <button style="background-color: deepskyblue; border: black 2px solid; border-radius: 5px; padding: 2px; test"> ADD TO CART</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
-                <div class="text">
-                    <h2>KitKat</h2>
-                    <h4>$5.00</h4>
-                    <button style="background-color: deepskyblue; border: black 2px solid; border-radius: 5px; padding: 2px; test"> ADD TO CART</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
-                <div class="text">
-                    <h2>KitKat</h2>
-                    <h4>$5.00</h4>
-                    <button style="background-color: deepskyblue; border: black 2px solid; border-radius: 5px; padding: 2px; test"> ADD TO CART</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
-                <div class="text">
-                    <h2>KitKat</h2>
-                    <h4>$5.00</h4>
-                    <button style="background-color: deepskyblue; border: black 2px solid; border-radius: 5px; padding: 2px; test"> ADD TO CART</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
-                <div class="text">
-                    <h2>KitKat</h2>
-                    <h4>$5.00</h4>
-                    <button style="background-color: deepskyblue; border: black 2px solid; border-radius: 5px; padding: 2px; test"> ADD TO CART</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
-                <div class="text">
-                    <h2>KitKat</h2>
-                    <h4>$5.00</h4>
-                    <button style="background-color: deepskyblue; border: black 2px solid; border-radius: 5px; padding: 2px; test"> ADD TO CART</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
-                <div class="text">
-                    <h2>KitKat</h2>
-                    <h4>$5.00</h4>
-                    <button style="background-color: deepskyblue; border: black 2px solid; border-radius: 5px; padding: 2px; test"> ADD TO CART</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
-                <div class="text">
-                    <h2>KitKat</h2>
-                    <h4>$5.00</h4>
-                    <button style="background-color: deepskyblue; border: black 2px solid; border-radius: 5px; padding: 2px; test"> ADD TO CART</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
-                <div class="text">
-                    <h2>KitKat</h2>
-                    <h4>$5.00</h4>
-                    <button style="background-color: deepskyblue; border: black 2px solid; border-radius: 5px; padding: 2px; test"> ADD TO CART</button>
-                </div>
-            </div>
-
-
-
-        </main>
     </div>
 
 </div>
