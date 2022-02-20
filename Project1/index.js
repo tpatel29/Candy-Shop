@@ -1,6 +1,7 @@
 let slidePosition = 0;
 const slides = document.getElementsByClassName("carousel__item");
 const totalSlides = slides.length;
+//create the timer
 var timer;
 
 document.getElementById("carousel__button-next").addEventListener("click", function(){
@@ -11,6 +12,7 @@ document.getElementById("carousel__button-prev").addEventListener("click", funct
     moveToPrevSlide();
 });
 
+//start timer once you load the page
 clearTimeout(timer);
 timer = setTimeout(() => moveToNextSlide(), 5000);
 
@@ -19,6 +21,7 @@ function updateSlidePosition(){
         slide.classList.remove("carousel__item--selected");
         slide.classList.add("carousel__item--hidden");
     }
+    //starts the timer every 5 seconds after first load up
     clearTimeout(timer);
     timer = setTimeout(() => moveToNextSlide(), 5000);
     slides[slidePosition].classList.add("carousel__item--selected");
