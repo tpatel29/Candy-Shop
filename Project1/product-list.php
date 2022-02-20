@@ -15,7 +15,7 @@
 
 
             <div class="card">
-                <img src="../CandyPictures/KitKat.jpeg" alt="Sample photo">
+                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
                 <div class="text">
                     <h2>KitKat</h2>
                     <h4>$5.00</h4>
@@ -23,7 +23,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="../CandyPictures/KitKat.jpeg" alt="Sample photo">
+                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
                 <div class="text">
                     <h2>KitKat</h2>
                     <h4>$5.00</h4>
@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="../CandyPictures/KitKat.jpeg" alt="Sample photo">
+                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
                 <div class="text">
                     <h2>KitKat</h2>
                     <h4>$5.00</h4>
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="../CandyPictures/KitKat.jpeg" alt="Sample photo">
+                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
                 <div class="text">
                     <h2>KitKat</h2>
                     <h4>$5.00</h4>
@@ -47,7 +47,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="../CandyPictures/KitKat.jpeg" alt="Sample photo">
+                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
                 <div class="text">
                     <h2>KitKat</h2>
                     <h4>$5.00</h4>
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="../CandyPictures/KitKat.jpeg" alt="Sample photo">
+                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
                 <div class="text">
                     <h2>KitKat</h2>
                     <h4>$5.00</h4>
@@ -63,13 +63,30 @@
                 </div>
             </div>
             <div class="card">
-                <img src="../CandyPictures/KitKat.jpeg" alt="Sample photo">
+                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
                 <div class="text">
                     <h2>KitKat</h2>
                     <h4>$5.00</h4>
                     <button style="background-color: deepskyblue; border: black 2px solid; border-radius: 5px; padding: 2px; test"> ADD TO CART</button>
                 </div>
             </div>
+            <div class="card">
+                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
+                <div class="text">
+                    <h2>KitKat</h2>
+                    <h4>$5.00</h4>
+                    <button style="background-color: deepskyblue; border: black 2px solid; border-radius: 5px; padding: 2px; test"> ADD TO CART</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="../CandyPictures/KitKat-King.webp" alt="Sample photo">
+                <div class="text">
+                    <h2>KitKat</h2>
+                    <h4>$5.00</h4>
+                    <button style="background-color: deepskyblue; border: black 2px solid; border-radius: 5px; padding: 2px; test"> ADD TO CART</button>
+                </div>
+            </div>
+
 
 
         </main>
