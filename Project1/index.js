@@ -1,6 +1,7 @@
 let slidePosition = 0;
 const slides = document.getElementsByClassName("carousel__item");
 const totalSlides = slides.length;
+var timer;
 
 document.getElementById("carousel__button-next").addEventListener("click", function(){
     moveToNextSlide();
@@ -10,12 +11,16 @@ document.getElementById("carousel__button-prev").addEventListener("click", funct
     moveToPrevSlide();
 });
 
+clearTimeout(timer);
+timer = setTimeout(() => moveToNextSlide(), 5000);
+
 function updateSlidePosition(){
     for(let slide of slides){
         slide.classList.remove("carousel__item--selected");
         slide.classList.add("carousel__item--hidden");
     }
-
+    clearTimeout(timer);
+    timer = setTimeout(() => moveToNextSlide(), 5000);
     slides[slidePosition].classList.add("carousel__item--selected");
 }
 
@@ -37,7 +42,7 @@ function moveToPrevSlide(){
     updateSlidePosition()
 }
 
-document.querySelectorAll(".carousel").forEach(carousel =>{
+    document.querySelectorAll(".carousel").forEach(carousel =>{
     const items = carousel.querySelectorAll(".carousel__item");
     const buttonDisplay = Array.from(items, () => {
         return `<span class="carousel__button"></span>`;
@@ -61,5 +66,4 @@ document.querySelectorAll(".carousel").forEach(carousel =>{
         });
     });
 });
-
 
