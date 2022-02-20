@@ -99,17 +99,3 @@ body{
     height: 50px;
     margin: auto;
 }
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: stretch;
-}
-.card {
-    flex: 0 0 250px;
-    margin: 15px;
-}
-.card .text {
-    padding: 0 20px 20px;
-}
-
