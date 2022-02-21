@@ -1,5 +1,5 @@
 </body>
-<footer class="footer page-footer font-small">
+<footer class="footer page-footer font-small" >
     <div class="container">
         <div class="row">
             <span class="text-muted">The Sweet Tooth Co.</span>

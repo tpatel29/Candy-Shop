@@ -2,7 +2,7 @@
     include("../views/header.php")
 ?>
 <div class="centered resposive" >
-        <form class="form1" >
+        <form class="form1" style="font-size: 125%">
             <h1 >Filters </h1>
             <labal for="sort">Sort By: </labal>
             <select id="sort" onchange="ajaxFunction1()">
@@ -41,7 +41,7 @@
                 <option value='KitKat'>KitKat</option>
                 <option value='M&M'>M&M</option>
             </select>
-
+            <form method='POST' action='product-list.php'><input type='submit' value='RESET FILTERS'/> </form>
         </form>
         <div id = 'ajaxDiv'>
             <?php

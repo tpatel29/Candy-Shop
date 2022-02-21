@@ -16,18 +16,11 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-        <nav class="navbar navbar-expand-md
-                            justify-content-start
-                            bg-dark navbar-dark
-                            col-12">
-            <a href="../Project1/index.php">𝕥𝕙𝕖 𝕤𝕨𝕖𝕖𝕥 𝕥𝕠𝕠𝕥𝕙</a>
-            <button class="navbar-toggler" type="button"
-                    data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggle-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <nav class="navbar navbar-expand-md justify-content-start bg-dark navbar-dark col-12">
+            <a href="../Project1/index.php" style="font-size: 150%">𝕥𝕙𝕖 𝕤𝕨𝕖𝕖𝕥 𝕥𝕠𝕠𝕥𝕙</a>
+            <div>
                 <ul class="navbar-nav">
-                    <li class="nav-item">
+                    <li class="nav-item" style="padding: 5px; margin: 1px; font-size: 150%;">
                         <a class="nav-link" href="./product-list.php">Product List</a>
                     </li>
                 </ul>
