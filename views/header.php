@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>The Sweet Tooth Co.</title>
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -11,6 +11,7 @@
           crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <script src="../Project1/filter.js"></script>
+
 </head>
 <body>
 <div class="container-fluid">
@@ -28,9 +29,6 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="./product-list.php">Product List</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./productDetails.php?id=2">Product Detail</a>
                     </li>
                 </ul>
             </div>

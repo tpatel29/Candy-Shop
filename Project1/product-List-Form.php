@@ -12,7 +12,7 @@ foreach ($productList as $product) {
     echo "<div class='text'>";
     echo "<h4>" . $product['name'] . "</h4>";
     echo "<h4>$" . $product['price'] . "</h4>";
-    echo "<button style='background-color: deepskyblue; border: black 2px solid; border-radius: 5px; padding: 2px; test'> ADD TO CART</button>";
+    echo "<form method='POST' action='productDetails.php'><input type='hidden' name='idTemp' value='".$product['id']."'/> <input type='submit' value='View Product Details'/> </form>";
     echo "</div>";
     echo "</div>";
 }

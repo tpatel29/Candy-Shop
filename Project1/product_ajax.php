@@ -1,7 +1,5 @@
 <?php
-session_start();
 include ("../database/connection.php");
-include ("../database/funcitons.php");
 
 $sort = filter_input(INPUT_GET, 'sort');
 $price = filter_input(INPUT_GET, 'price');

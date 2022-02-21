@@ -9,3 +9,13 @@ body{margin:0;}
 .nav a.active{background-color: black; color: white}
 
 .nav a.title{font-size: 30px; color: blueviolet}
+
+
+@media only screen and (max-width: 450px) {
+    nav {
+        height: 100px;
+    }
+    p {
+       font-size: 300px;
+    }
+}

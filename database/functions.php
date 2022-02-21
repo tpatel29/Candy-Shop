@@ -20,7 +20,6 @@ function get_All_Products($sort , $price, $size, $flavor, $brand){
     $hasSize = false;
     $hasFlavor = false;
     $hasBrand = false;
-
     if($price != ""){
         if(!$setWhere){
             $query = $query." WHERE price <= :pricee ";
@@ -51,30 +50,33 @@ function get_All_Products($sort , $price, $size, $flavor, $brand){
         }
         $hasFlavor = true;
     }
-    if($brand != ""){
-        if(!$setWhere){
-            $query = $query." WHERE brand = :brandd ";
+    if($brand != "") {
+        if (!$setWhere) {
+            $query = $query . " WHERE brand = :brandd ";
             $setWhere = true;
-        }
-        else {
+        } else {
             $query = $query . " brand = :brandd ";
         }
         $hasBrand = true;
     }
-    if($sort != ""){
-        $query = $query . " ORDER BY = :sortt ";
-        $hasSort = true;
+    if($sort == "price"){
+        $query .=  " ORDER BY `price` ";
+    }
+    elseif ($sort == "name"){
+        $query .=  " ORDER BY `name` ";
     }
     $statement = $conn->prepare($query);
     if($hasPrice){ $statement->bindValue(':pricee', $price);}
     if($hasSize){ $statement->bindValue(':sizee', $size);}
     if($hasBrand){ $statement->bindValue(':brandd', $brand);}
     if($hasFlavor){ $statement->bindValue(':flavorr', $flavor);}
-    if($hasSort){ $statement->bindValue(':sortt', $sort);}
+
+
 
     $statement->execute();
     $results = $statement->fetchAll();
     $statement->closeCursor();
     return $results;
+
 }
 ?>

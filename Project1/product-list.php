@@ -1,7 +1,7 @@
 <?php
     include("../views/header.php")
 ?>
-<div class="centered" >
+<div class="centered resposive" >
         <form class="form1" >
             <h1 >Filters </h1>
             <labal for="sort">Sort By: </labal>
@@ -54,9 +54,7 @@
             ?>
         </div>
         <br><br><br>
-
     </div>
-
 </div>
 
 <?php
