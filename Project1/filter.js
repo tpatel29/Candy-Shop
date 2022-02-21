@@ -26,9 +26,11 @@ function ajaxFunction1() {
         }
     }
     var sort = document.getElementById('sort').value;
-    var filter = document.getElementById('filter').value;
-    var queryString = "?sort=" + sort + "&filter=" + filter;
-    ajaxRequest.open("GET", "./task_ajax.php" + queryString, true);
-
+    var price = document.getElementById('price').value;
+    var size = document.getElementById('size').value;
+    var flavor = document.getElementById('flavor').value;
+    var brand = document.getElementById('brand').value;
+    var queryString = "?sort=" + sort + "&price=" + price + "&size=" + size + "&flavor=" + flavor + "&brand=" + brand;
+    ajaxRequest.open("GET", "./product_ajax.php" + queryString, true);
     ajaxRequest.send(null);
 }

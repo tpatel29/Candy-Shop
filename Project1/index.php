@@ -21,8 +21,8 @@
     <button id="carousel__button-next" aria-label="Next">></button>
   </div>
 </div>
+
 <script src="index.js"></script>
-<script src="filter.js"></script>
 <h2>Welcome to The Sweet Tooth!</h2>
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, inventore ipsum. A at culpa cum earum iure
   magnam perferendis reprehenderit sapiente unde! Distinctio esse iste reiciendis saepe sed sequi ut?</p>
