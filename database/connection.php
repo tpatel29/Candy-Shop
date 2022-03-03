@@ -1,8 +1,8 @@
 <?php
 $servername = "sql1.njit.edu";
-$username = "tp29";
-$password = "Password595!";
-$dbname = "tp29";
+$username = "${{secrets.NAMER}}";
+$password = "${{secrets.PASSWORD}}";
+$dbname = "${{secrets.NAMER}}";
 
 
 try {
